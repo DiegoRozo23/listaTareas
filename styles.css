@@ -1,0 +1,84 @@
+*{
+    border: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Font Awesome 5 Free';
+    box-sizing: border-box;
+}
+html{
+    background: linear-gradient(90deg, #2BC0E4 10%, #5adeffe8 90%);
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 15vh auto 15vh auto;
+    border: 1px solid rgb(160, 160, 160);
+    width: 50vw;
+}
+.card h1{
+    padding: 13px 13px 13px 20px;
+    width: 100%;
+    color: white;
+    font-size: 1.4em;
+    background-color: rgb(41, 128, 185)
+}
+.card input{
+    font-size: 18px;
+    color: #2980b9;
+    background-color: #f7f7f7;
+    width: 100%;
+    padding: 13px 13px 13px 20px;
+    border: 3px solid rgba(0,0,0,0);
+}
+.card input:focus{
+    outline: 1px solid #2980b9;
+}
+.card ul{
+    width: 100%;
+}
+.card ul li{
+    font-size: 1.2em;
+    background-color: #f7f7f7;
+    padding: 13px 13px 13px 20px;
+}
+.card ul li h4{
+    cursor: pointer;
+    position: relative;
+    color: #666;
+}
+.card ul li h4 span{
+    opacity: 0;
+}
+.card ul li h4:hover::before{
+    content: "\f2ed";
+    position: absolute;
+    left: 93%;
+    color: rgb(187, 3, 3);
+}
+.card ul li h4 span{
+    position: absolute;
+    left: 93%;
+}
+.done{
+    text-decoration:line-through;
+    opacity: 0.7;
+}
+@media only screen and (max-width: 700px){
+    .card{
+        width: 70vw;
+    }
+    .card ul li h4::before{
+        content: "\f2ed";
+        position: absolute;
+        left: 93%;
+        color: rgb(160, 2, 2);
+    }
+}
+@media only screen and (max-width: 430px){
+    .card{
+        width: 95vw;
+    }
+}
